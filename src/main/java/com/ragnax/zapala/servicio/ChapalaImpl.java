@@ -43,7 +43,6 @@ public class ChapalaImpl implements Chapala{
 
 	public Timestamp convertirStrFechaConFormatToTimestamp(ZapalaRequest zapalaRequest) throws ZapalaImplException{
 		//    	SimpleDateFormat formatInicial = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"); 2019-10-22T10:30:00
-
 		try{
 //			throw new Exception("Cooperaste");
 			if(isValidDate(zapalaRequest)){
@@ -156,7 +155,8 @@ public class ChapalaImpl implements Chapala{
 	}
 	
 	public Zapala generarCodigoByNumeroByEncodear (ZapalaRequest zapalaRequest) throws ZapalaImplException{
-
+		System.out.println("encriptar"+zapalaRequest.getListaString().get(0));
+		
 		java.util.Base64.Encoder encoder = java.util.Base64.getEncoder();
 
 		try {
