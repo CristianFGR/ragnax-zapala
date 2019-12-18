@@ -22,7 +22,7 @@ public interface Chapala {
 	
 	public Zapala generarCodigoByNumero(ZapalaRequest zapalaRequest) throws ZapalaImplException;
 	
-	public Zapala getMD5(ZapalaRequest zapalaRequest)  throws ZapalaImplException;
+	public Zapala generarMD5(ZapalaRequest zapalaRequest)  throws ZapalaImplException;
 	
 	public <T> Zapala generacionSHA(T content, Class<T> typeRequest);
 	

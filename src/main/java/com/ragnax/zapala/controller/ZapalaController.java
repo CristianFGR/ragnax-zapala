@@ -123,6 +123,21 @@ public class ZapalaController {
 				zapalaRequest), HttpStatus.OK);
 	}
 	
+	@ApiOperation(value = "generarMD5", response = Zapala.class)
+	@ApiResponses(value = {
+			@ApiResponse(code = 422, message = "Error al procesar los datos de creacion", response = RagnaxError.class),
+			@ApiResponse(code = 503, message = "Error con el servicio", response = RagnaxError.class),
+			@ApiResponse(code = 200, message = "Servicio ejecutado satisfactoriamente", response = Zapala.class)
+	})
+	@PostMapping(value = "${servicio.app.uri.generarMD5}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Zapala>  generarMD5( @ApiParam(value = "objeto de entrada", required = true) 
+	@RequestBody @Valid ZapalaRequest zapalaRequest, @ApiIgnore Errors errors)  throws ZapalaImplException{
+//		System.out.println(textoValue);
+		
+		return new ResponseEntity<>(chapala.generarMD5(
+				zapalaRequest), HttpStatus.OK);
+	}
+	
 	@ApiOperation(value = "generarPatronRUT", response = Zapala.class)
 	@ApiResponses(value = {
 			@ApiResponse(code = 422, message = "Error al procesar los datos de creacion", response = RagnaxError.class),

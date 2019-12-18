@@ -189,8 +189,9 @@ public class ChapalaImpl implements Chapala{
 		}
 	}
 	
-	public Zapala getMD5(ZapalaRequest zapalaRequest) throws ZapalaImplException {
+	public Zapala generarMD5(ZapalaRequest zapalaRequest) throws ZapalaImplException {
 		try {
+			System.out.println("MD5:"+zapalaRequest.getListaString().get(0));
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			byte[] messageDigest = md.digest(zapalaRequest.getListaString().get(0).getBytes());
 			BigInteger number = new BigInteger(1, messageDigest);
