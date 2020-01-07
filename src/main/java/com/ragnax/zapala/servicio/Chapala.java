@@ -2,8 +2,8 @@ package com.ragnax.zapala.servicio;
 
 import java.sql.Timestamp;
 
-import com.ragnax.zapala.controller.modelo.Zapala;
-import com.ragnax.zapala.controller.modelo.ZapalaRequest;
+import com.ragnax.domain.zapala.modelo.Zapala;
+import com.ragnax.domain.zapala.modelo.ZapalaRequest;
 import com.ragnax.zapala.exception.ZapalaImplException;
 
 public interface Chapala {

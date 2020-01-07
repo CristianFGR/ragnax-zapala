@@ -15,8 +15,8 @@ import java.util.regex.Pattern;
 
 import org.springframework.stereotype.Service;
 
-import com.ragnax.zapala.controller.modelo.Zapala;
-import com.ragnax.zapala.controller.modelo.ZapalaRequest;
+import com.ragnax.domain.zapala.modelo.Zapala;
+import com.ragnax.domain.zapala.modelo.ZapalaRequest;
 import com.ragnax.zapala.exception.ZapalaImplException;
 
 @Service

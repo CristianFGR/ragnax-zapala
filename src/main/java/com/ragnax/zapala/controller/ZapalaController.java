@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -19,9 +20,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import springfox.documentation.annotations.ApiIgnore;
 
+import com.ragnax.domain.zapala.modelo.Zapala;
+import com.ragnax.domain.zapala.modelo.ZapalaRequest;
 import com.ragnax.zapala.controller.modelo.RagnaxError;
-import com.ragnax.zapala.controller.modelo.Zapala;
-import com.ragnax.zapala.controller.modelo.ZapalaRequest;
 import com.ragnax.zapala.exception.ZapalaImplException;
 import com.ragnax.zapala.servicio.Chapala;
 
@@ -31,6 +32,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.http.MediaType;
 
 @RestController
+@RefreshScope
 public class ZapalaController {
 	
 	Logger logger  = LoggerFactory.getLogger(ZapalaController.class);
