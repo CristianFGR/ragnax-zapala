@@ -33,6 +33,8 @@ public class ChapalaImpl implements Chapala{
 
 		public Zapala generarTiempoDuracion(ZapalaRequest zapalaRequest)  throws ZapalaImplException {
 			try{
+				System.out.println(zapalaRequest.getLocalDateTime().getSecond());
+				System.out.println(zapalaRequest.getLocalDateTime().getNano());
 				return new Zapala(zapalaRequest.getLocalDateTime().getSecond()+
 				""+zapalaRequest.getLocalDateTime().getNano());
 			}catch(Exception e){
